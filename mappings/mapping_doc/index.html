@@ -436,7 +436,7 @@
         
 
         <dt>Mapping file:</dt>
-        <dd><a href="mapping_fem.ttl" target="_blank">mapping_fem.ttl</a></dd>
+        <dd><a href="mapping.ttl" target="_blank">mapping.ttl</a></dd>
 
         <dt>Description:</dt><dd>Este conjunto de mappings RML transforma los datos de un censo o registro municipal de vehículos a RDF, utilizando la ontología EDINT CensoVehículos. El objetivo es generar un grafo RDF interoperable para representar las entidades principales del registro de vehículos y su información asociada, orientada a usos habituales de las entidades locales</dd>
 
@@ -486,59 +486,54 @@
 
       <main class="tm-main" id="main">
 
+        <div id="abstract" class="section-card">
+          <h2 id="abstract-sec" class="list">Abstract</h2>
+          <p>Este conjunto de mappings RML transforma los datos de un censo o registro municipal de vehículos a RDF, utilizando la ontología EDINT CensoVehículos. El objetivo es generar un grafo RDF interoperable para representar las entidades principales del registro de vehículos y su información asociada, orientada a usos habituales de las entidades locales</p>
+        </div>
+
         <div id="nstable" class="section-card">
           <h2 id="ns" class="list">Namespaces</h2>
           <table class="hlist">
             <thead><tr><th>Prefix</th><th>Namespace</th></tr></thead>
             <tbody>
             
+              <tr><td><code>schema1</code></td><td><a href="http://schema.org/">http://schema.org/</a></td></tr>
+
+              <tr><td><code>edintvehicletype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/</a></td></tr>
+
+              <tr><td><code>ql</code></td><td><a href="http://semweb.mmlab.be/ns/ql#">http://semweb.mmlab.be/ns/ql#</a></td></tr>
+
               <tr><td><code>edintveh</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#">http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#</a></td></tr>
 
-<tr><td><code>schema</code></td><td><a href="https://schema.org/">https://schema.org/</a></td></tr>
+              <tr><td><code>d2rq</code></td><td><a href="http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#">http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#</a></td></tr>
 
-<tr><td><code>edintvehiclepermittype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/</a></td></tr>
+              <tr><td><code>rml</code></td><td><a href="http://semweb.mmlab.be/ns/rml#">http://semweb.mmlab.be/ns/rml#</a></td></tr>
 
-<tr><td><code>edintvehiclepermitstatus</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/</a></td></tr>
+              <tr><td><code>comp</code></td><td><a href="http://semweb.mmlab.be/ns/rml-compression#">http://semweb.mmlab.be/ns/rml-compression#</a></td></tr>
 
-<tr><td><code>edintvehiclepermitperiodicity</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/</a></td></tr>
+              <tr><td><code>edintvehiclepropulsiontype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/</a></td></tr>
 
-<tr><td><code>edintvehicletype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/</a></td></tr>
+              <tr><td><code>map</code></td><td><a href="http://mapping.example.com/">http://mapping.example.com/</a></td></tr>
 
-<tr><td><code>edintvehiclepropulsiontype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/</a></td></tr>
+              <tr><td><code>edintvehiclepermitperiodicity</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/</a></td></tr>
 
-<tr><td><code>edintvehicleenvironmentalbadge</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/</a></td></tr>
+              <tr><td><code>edintvehiclepermittype</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/</a></td></tr>
 
-<tr><td><code>edintzone</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/def/commons/zone#">http://vocab.linkeddata.es/datosabiertos/def/commons/zone#</a></td></tr>
+              <tr><td><code>dct</code></td><td><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></td></tr>
 
-<tr><td><code>rr</code></td><td><a href="http://www.w3.org/ns/r2rml#">http://www.w3.org/ns/r2rml#</a></td></tr>
+              <tr><td><code>edintzone</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/def/commons/zone#">http://vocab.linkeddata.es/datosabiertos/def/commons/zone#</a></td></tr>
 
-<tr><td><code>rml</code></td><td><a href="http://semweb.mmlab.be/ns/rml#">http://semweb.mmlab.be/ns/rml#</a></td></tr>
+              <tr><td><code>grel</code></td><td><a href="http://users.ugent.be/~bjdmeest/function/grel.ttl#">http://users.ugent.be/~bjdmeest/function/grel.ttl#</a></td></tr>
 
-<tr><td><code>rdf</code></td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td></tr>
+              <tr><td><code>rr</code></td><td><a href="http://www.w3.org/ns/r2rml#">http://www.w3.org/ns/r2rml#</a></td></tr>
 
-<tr><td><code>rdfs</code></td><td><a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a></td></tr>
+              <tr><td><code>edintvehiclepermitstatus</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/</a></td></tr>
 
-<tr><td><code>xsd</code></td><td><a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a></td></tr>
+              <tr><td><code>fnml</code></td><td><a href="http://semweb.mmlab.be/ns/fnml#">http://semweb.mmlab.be/ns/fnml#</a></td></tr>
 
-<tr><td><code>ql</code></td><td><a href="http://semweb.mmlab.be/ns/ql#">http://semweb.mmlab.be/ns/ql#</a></td></tr>
+              <tr><td><code>formats</code></td><td><a href="http://www.w3.org/ns/formats/">http://www.w3.org/ns/formats/</a></td></tr>
 
-<tr><td><code>d2rq</code></td><td><a href="http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#">http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#</a></td></tr>
-
-<tr><td><code>foaf</code></td><td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td></tr>
-
-<tr><td><code>formats</code></td><td><a href="http://www.w3.org/ns/formats/">http://www.w3.org/ns/formats/</a></td></tr>
-
-<tr><td><code>comp</code></td><td><a href="http://semweb.mmlab.be/ns/rml-compression#">http://semweb.mmlab.be/ns/rml-compression#</a></td></tr>
-
-<tr><td><code>void</code></td><td><a href="http://rdfs.org/ns/void#">http://rdfs.org/ns/void#</a></td></tr>
-
-<tr><td><code>fnml</code></td><td><a href="http://semweb.mmlab.be/ns/fnml#">http://semweb.mmlab.be/ns/fnml#</a></td></tr>
-
-<tr><td><code>grel</code></td><td><a href="http://users.ugent.be/~bjdmeest/function/grel.ttl#">http://users.ugent.be/~bjdmeest/function/grel.ttl#</a></td></tr>
-
-<tr><td><code>dct</code></td><td><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></td></tr>
-
-<tr><td><code>map</code></td><td><a href="http://mapping.example.com/">http://mapping.example.com/</a></td></tr>
+              <tr><td><code>edintvehicleenvironmentalbadge</code></td><td><a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/">http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/</a></td></tr>
             
             </tbody>
           </table>
@@ -587,7 +582,7 @@
                   <div class="tm-field__k"><span class="tm-dot"></span>Subject</div>
                   <div class="tm-field__v">
                     
-                      http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}~iri
+                      http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}
                     
                   </div>
                 </div>
@@ -662,7 +657,7 @@
                   <div class="tm-field__k"><span class="tm-dot"></span>Subject</div>
                   <div class="tm-field__v">
                     
-                      http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{subtipo_autorizacion}-{estado}-{fecha_inicio_periodo}-{fecha_activacion}-{fecha_vigencia}-{distintivo}-{tipologia_vehiculo}-{periodicidad}
+                      http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{id_autorizacion}
                     
                   </div>
                 </div>
@@ -770,6 +765,15 @@
                       </td>
                     </tr>
                   
+                    <tr>
+                      <td><code>edintveh:endingDate</code></td>
+                      <td>
+                        
+                          <code>{fecha_vigencia}</code>
+                        
+                      </td>
+                    </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -840,7 +844,7 @@
                       <td><code>a</code></td>
                       <td>
                         
-                          <code>http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone</code>
+                          <code>http://vocab.linkeddata.es/datosabiertos/def/commons/zone#RegulatedZone</code>
                         
                       </td>
                     </tr>
@@ -983,7 +987,7 @@
 </div>
 
 <script>
-  window.__RML_PAYLOAD__ = {"maps": {"owner_0": {"id": "owner_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}~iri", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}~iri", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Owner", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner", "o_href": null, "o_linkable": false, "o_base": "edintveh:Owner"}]}, "permit_0": {"id": "permit_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{subtipo_autorizacion}-{estado}-{fecha_inicio_periodo}-{fecha_activacion}-{fecha_vigencia}-{distintivo}-{tipologia_vehiculo}-{periodicidad}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{subtipo_autorizacion}-{estado}-{fecha_inicio_periodo}-{fecha_activacion}-{fecha_vigencia}-{distintivo}-{tipologia_vehiculo}-{periodicidad}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Permit", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit", "o_href": null, "o_linkable": false, "o_base": "edintveh:Permit"}, {"p": "edintveh:authorisesInArea", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}"}, {"p": "edintveh:authorisesInSegment", "o_display": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}", "o_raw": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}"}, {"p": "edintveh:permitType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}"}, {"p": "edintveh:permitStatus", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}"}, {"p": "edintveh:permitPeriodicity", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}"}, {"p": "edintveh:permitOwner", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}"}, {"p": "edintveh:authorisesVehicle", "o_display": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}"}, {"p": "edintveh:beginningDate", "o_display": "{fecha_inicio_periodo}", "o_raw": "{fecha_inicio_periodo}", "o_href": null, "o_linkable": false, "o_base": "{fecha_inicio_periodo}"}, {"p": "edintveh:activationDate", "o_display": "{fecha_activacion}", "o_raw": "fecha_activacion", "o_href": null, "o_linkable": false, "o_base": "fecha_activacion"}]}, "trafficControlledZone_0": {"id": "trafficControlledZone_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintzone:TrafficControlledZone", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone", "o_href": null, "o_linkable": false, "o_base": "edintzone:TrafficControlledZone"}]}, "vehicle_0": {"id": "vehicle_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Vehicle", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle", "o_href": null, "o_linkable": false, "o_base": "edintveh:Vehicle"}, {"p": "edintveh:registeredOwner", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}"}, {"p": "edintveh:vehicleType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}"}, {"p": "edintveh:propulsionType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}"}, {"p": "edintveh:environmentalBadge", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}"}, {"p": "edintveh:licensePlateNumber", "o_display": "{vehiculo_id}", "o_raw": "{vehiculo_id}", "o_href": null, "o_linkable": false, "o_base": "{vehiculo_id}"}]}}, "containers": {"owner_0": "cy_owner_0", "permit_0": "cy_permit_0", "trafficControlledZone_0": "cy_trafficControlledZone_0", "vehicle_0": "cy_vehicle_0"}};
+  window.__RML_PAYLOAD__ = {"maps": {"owner_0": {"id": "owner_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Owner", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner", "o_href": null, "o_linkable": false, "o_base": "edintveh:Owner"}]}, "permit_0": {"id": "permit_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{id_autorizacion}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{id_autorizacion}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Permit", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit", "o_href": null, "o_linkable": false, "o_base": "edintveh:Permit"}, {"p": "edintveh:authorisesInArea", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}"}, {"p": "edintveh:authorisesInSegment", "o_display": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}", "o_raw": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}"}, {"p": "edintveh:permitType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}"}, {"p": "edintveh:permitStatus", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}"}, {"p": "edintveh:permitPeriodicity", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}"}, {"p": "edintveh:permitOwner", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}"}, {"p": "edintveh:authorisesVehicle", "o_display": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}"}, {"p": "edintveh:beginningDate", "o_display": "{fecha_inicio_periodo}", "o_raw": "{fecha_inicio_periodo}", "o_href": null, "o_linkable": false, "o_base": "{fecha_inicio_periodo}"}, {"p": "edintveh:activationDate", "o_display": "fecha_activacion", "o_raw": "fecha_activacion", "o_href": null, "o_linkable": false, "o_base": "{fecha_activacion}"}, {"p": "edintveh:endingDate", "o_display": "fecha_vigencia", "o_raw": "fecha_vigencia", "o_href": null, "o_linkable": false, "o_base": "{fecha_vigencia}"}]}, "trafficControlledZone_0": {"id": "trafficControlledZone_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintzone:RegulatedZone", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/commons/zone#RegulatedZone", "o_href": null, "o_linkable": false, "o_base": "edintzone:RegulatedZone"}]}, "vehicle_0": {"id": "vehicle_0", "source_info": {"kind": "CSV", "source": "dataset_enriquecido.csv", "referenceFormulation": "ql:CSV", "iterator": "", "sqlQuery": "", "tableName": ""}, "subject": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "subject_raw": "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}", "subject_href": null, "subject_linkable": false, "predicates": [{"p": "a", "o_display": "edintveh:Vehicle", "o_raw": "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle", "o_href": null, "o_linkable": false, "o_base": "edintveh:Vehicle"}, {"p": "edintveh:registeredOwner", "o_display": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}"}, {"p": "edintveh:vehicleType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}"}, {"p": "edintveh:propulsionType", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}"}, {"p": "edintveh:environmentalBadge", "o_display": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}", "o_raw": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}", "o_href": null, "o_linkable": false, "o_base": "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}"}, {"p": "edintveh:licensePlateNumber", "o_display": "vehiculo_id", "o_raw": "vehiculo_id", "o_href": null, "o_linkable": false, "o_base": "{vehiculo_id}"}]}}, "containers": {"owner_0": "cy_owner_0", "permit_0": "cy_permit_0", "trafficControlledZone_0": "cy_trafficControlledZone_0", "vehicle_0": "cy_vehicle_0"}};
 </script>
 
 <script>
